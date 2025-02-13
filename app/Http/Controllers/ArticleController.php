@@ -12,6 +12,10 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        if (! auth()->user()->is_admin) {
+            abort(403);
+        }
+
         return view('articles.index', [
             'articles' => Article::all(),
         ]);
