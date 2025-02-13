@@ -24,6 +24,7 @@
                                 <th class="text-start">Author</th>
                                 <th class="text-start">Published</th>
                                 <th class="text-start">Date Created</th>
+                                <th class="text-start">Is Admin</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -34,6 +35,7 @@
                                     <td class="py-4">{{ $article->author->name }}</td>
                                     <td class="py-4">{{ $article->is_published ? 'Yes' : 'No' }}</td>
                                     <td class="py-4">{{ $article->created_at }}</td>
+                                    <td class="py-4">{{ $article->is_admin ? 'Yes' : 'No' }}</td>
                                     <td class="text-end">
                                         <a href="{{ route('articles.edit', ['article' => $article->id]) }}"
                                             class="bg-gray-500 hover:bg-gray-600 mr-1 py-2 px-3 rounded-md text-white">

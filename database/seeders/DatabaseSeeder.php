@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'TuanTQ',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('12341234'),
+            'is_admin' => true,
         ]);
 
         Article::factory(20)->recycle($user)->create();
